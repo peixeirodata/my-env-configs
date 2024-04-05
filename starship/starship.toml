@@ -2,7 +2,7 @@
 
 # Use custom format
 format = """
-[╭](bright-red)$username\
+[╭](bold red)$username\
 $hostname\
 $localip\
 $shlvl\
@@ -122,7 +122,7 @@ symbol = ""
 style = "bold purple"
 
 [git_status]
-format ='([\[$all_status$ahead_behind\]]($style))'
+format ='([\[ $all_status$ahead_behind\]]($style))'
 conflicted = "="
 ahead =	"⇡${count} "
 behind = "⇣${count} "
