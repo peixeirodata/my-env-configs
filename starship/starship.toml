@@ -1,0 +1,207 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# Use custom format
+format = """
+[╭](bright-red)$username\
+$hostname\
+$localip\
+$shlvl\
+$singularity\
+$kubernetes\
+$directory\
+$vcsh\
+$fossil_branch\
+$git_branch\
+$git_state\
+$git_metrics\
+$git_status\
+$hg_branch\
+$pijul_channel\
+$docker_context\
+$package\
+$c\
+$cmake\
+$cobol\
+$daml\
+$dart\
+$deno\
+$dotnet\
+$elixir\
+$elm\
+$erlang\
+$fennel\
+$golang\
+$guix_shell\
+$haskell\
+$haxe\
+$helm\
+$java\
+$julia\
+$kotlin\
+$gradle\
+$lua\
+$nim\
+$nodejs\
+$ocaml\
+$opa\
+$perl\
+$php\
+$pulumi\
+$purescript\
+$python\
+$quarto\
+$raku\
+$rlang\
+$red\
+$ruby\
+$rust\
+$scala\
+$solidity\
+$swift\
+$terraform\
+$typst\
+$vlang\
+$vagrant\
+$zig\
+$buf\
+$nix_shell\
+$conda\
+$meson\
+$spack\
+$memory_usage\
+$aws\
+$gcloud\
+$openstack\
+$azure\
+$direnv\
+$env_var\
+$crystal\
+$custom\
+$sudo\
+$cmd_duration\
+$line_break\
+$time\
+$status\
+$container\
+$shell\
+$character
+"""
+
+
+#Wait 10 milliseconds for starship to check files under the current directory.
+scan_timeout = 10
+
+[username]
+style_user = "bright-cyan"
+style_root = "green bold"
+format = '[\[](bold red)[$user]($style)[\]](bold red)'
+disabled = false
+show_always = true
+
+[hostname]
+ssh_only = false
+disabled = false
+trim_at = '.'
+format = '[┄](bold red)[\[](bold red)[$ssh_symbol$hostname]($style)[\]](bold red) '
+style = 'bright-cyan'
+
+[directory]
+truncation_length = 2
+format = '[~](bright-green) [\[](bold red)[$path]($style)[$read_only]($read_only_style)[\]](bold red) '
+style = "bold #f57800"
+read_only = "🔒"
+read_only_style = "red"
+
+[cmd_duration]
+min_time = 500
+format = "took [$duration](bold yellow)"
+
+[git_branch]
+format = '[on](bold green) [$symbol $branch ]($style)'
+symbol = ""
+style = "bold purple"
+
+[git_status]
+format ='([\[$all_status$ahead_behind\]]($style))'
+conflicted = "="
+ahead =	"⇡${count} "
+behind = "⇣${count} "
+diverged = "⇕⇡${ahead_count}⇣${behind_count}"
+untracked = "?${count} "
+stashed = "$${count} "
+modified = "!${count} "
+staged = "+${count} "
+renamed = "»${count} "
+deleted = "✘${count} "
+style =	"bold red"
+disabled = false
+
+[git_state]
+rebase = "REBASING"
+merge =	"MERGING"
+revert = "REVERTING"
+cherry_pick = "CHERRY-PICKING"
+bisect = "BISECTING"
+am = "AM"
+am_or_rebase = "AM/REBASE"
+style =	"bold yellow"
+format = '\([$state( $progress_current/$progress_total)]($style)\) '
+disabled = false
+
+[hg_branch]
+symbol = " "
+style =	"bold purple"
+format = "on [$symbol$branch]($style) "
+
+[memory_usage]
+format = "via $symbol [${ram}( | ${ram_pct})]($style)"
+symbol = " "
+style = "bold dimmed green"
+
+[nodejs]
+format = "via [$symbol$version]($style) "
+symbol = "⬢ "
+style = "bold green"
+disabled = false
+not_capable_style = "bold red"
+
+[status]
+format = "[$symbol$status]($style)"
+symbol = "✖"
+style = "bold red"
+disabled = true
+
+[docker_context]
+symbol = " "
+
+[conda]
+symbol = " "
+
+[dart]
+symbol = " "
+
+[package]
+symbol = '📦 '
+
+[perl]
+symbol = " "
+
+[php]
+symbol = " "
+
+[python]
+symbol = " "
+
+[ruby]
+symbol = " "
+
+[rust]
+symbol = " "
+
+[swift]
+symbol = "ﯣ "
+
+[character]
+success_symbol="[╰──╼](bold red) "
+error_symbol="[╰──╼](bold red) "
+
