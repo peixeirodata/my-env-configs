@@ -7,15 +7,15 @@ O [Neovim](https://neovim.io/) é um editor de textos baseado no [Vim](https://w
 
 ## O que contém este diretório?  
 
-├📂 ~/.config/nvim -> diretório de configuração do nvim
-│       ├── init.lua -> indica um pacote Lua
-│       └📂 lua -> localização dos scripts
-│         ├── keymaps.lua -> mapeamento de atalhos do teclado (keymap)
-│         ├── lazy-config.lua -> configurações do gerenciador de pacotes (Lazy)
-│         ├── options.lua -> configuração de opções básicas do Neovim
-│         └📂 plugins -> diretório com as diretrizes de cada plugin
-│           ├── fugitive.lua
-│           └── telescope.lua
+├📂 ~/.config/nvim -> diretório de configuração do nvim  
+│       ├── init.lua -> indica um pacote Lua  
+│       └📂 lua -> localização dos scripts  
+│         ├── keymaps.lua -> mapeamento de atalhos do teclado (keymap)  
+│         ├── lazy-config.lua -> configurações do gerenciador de pacotes (Lazy)  
+│         ├── options.lua -> configuração de opções básicas do Neovim  
+│         └📂 plugins -> diretório com as diretrizes de cada plugin  
+│           ├── fugitive.lua  
+│           └── telescope.lua  
 
 
 ## Como funciona?  
@@ -31,15 +31,15 @@ O [Neovim](https://neovim.io/) é um editor de textos baseado no [Vim](https://w
 
 ## What does this directory contains?  
  
-├📂 ~/.config/nvim -> configuration directory
-│       ├── init.lua -> indicates a Lua package
-│       └📂 lua -> scripts location
-│         ├── keymaps.lua -> shortcuts keymapping
-│         ├── lazy-config.lua -> package manager config script (Lazy)
-│         ├── options.lua -> Neovim's basic configurations
-│         └📂 plugins -> directory with each installed plugins definitions
-│           ├── fugitive.lua
-│           └── telescope.lua
+├📂 ~/.config/nvim -> configuration directory  
+│       ├── init.lua -> indicates a Lua package  
+│       └📂 lua -> scripts location  
+│         ├── keymaps.lua -> shortcuts keymapping  
+│         ├── lazy-config.lua -> package manager config script (Lazy)  
+│         ├── options.lua -> Neovim's basic configurations  
+│         └📂 plugins -> directory with each installed plugins definitions  
+│           ├── fugitive.lua  
+│           └── telescope.lua  
 
 ## How does it works?  
 
