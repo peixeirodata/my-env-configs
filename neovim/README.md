@@ -8,7 +8,7 @@ O [Neovim](https://neovim.io/) é um editor de textos baseado no [Vim](https://w
 ## O que contém este diretório?  
 
 ├📂 ~/.config/nvim -> diretório de configuração do nvim  
-│       ├── init.lua -> indica um pacote Lua  
+│       ├── init.lua -> carrega as configuraçãoes de pacotes Lua  
 │       └📂 lua -> localização dos scripts  
 │         ├── keymaps.lua -> mapeamento de atalhos do teclado (keymap)  
 │         ├── lazy-config.lua -> configurações do gerenciador de pacotes (Lazy)  
@@ -19,7 +19,12 @@ O [Neovim](https://neovim.io/) é um editor de textos baseado no [Vim](https://w
 
 
 ## Como funciona?  
+Primeiramente você deve instalar o [Lazy](https://github.com/folke/lazy.nvim) como gerenciador de pacotes. Na minha configuração criei o arquivo `lazy-config.lua.lua`
+e utilizei o seguinte script:
 
+```lua
+
+```
 ## Como irá ficar com esse arquivo de configuração? (Preview)  
 
 
@@ -32,12 +37,12 @@ O [Neovim](https://neovim.io/) é um editor de textos baseado no [Vim](https://w
 ## What does this directory contains?  
  
 ├📂 ~/.config/nvim -> configuration directory  
-│       ├── init.lua -> indicates a Lua package  
+│       ├── init.lua -> loads the configurations of a Lua packages  
 │       └📂 lua -> scripts location  
 │         ├── keymaps.lua -> shortcuts keymapping  
 │         ├── lazy-config.lua -> package manager config script (Lazy)  
 │         ├── options.lua -> Neovim's basic configurations  
-│         └📂 plugins -> directory with each installed plugins definitions  
+│         └📂 plugins -> directory with each installed plugin definitions  
 │           ├── fugitive.lua  
 │           └── telescope.lua  
 
