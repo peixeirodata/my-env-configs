@@ -19,12 +19,64 @@ O [Neovim](https://neovim.io/) é um editor de textos baseado no [Vim](https://w
 
 
 ## Como funciona?  
-Primeiramente você deve instalar o [Lazy](https://github.com/folke/lazy.nvim) como gerenciador de pacotes. Na minha configuração criei o arquivo `lazy-config.lua.lua`
+
+### 1. Instalação do Lazy
+
+Primeiramente você deve instalar o [Lazy](https://github.com/folke/lazy.nvim) como gerenciador de pacotes. Na minha configuração criei o arquivo `~/.config/nvim/lua/lazy-config.lua`
 e utilizei o seguinte script:
 
 ```lua
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
+end
+vim.opt.rtp:prepend(lazypath)
 
+vim.g.mapleader = " "
+vim.g.localleader = " "
+require("lazy").setup("plugins", opts)
 ```
+Posteriormente, no arquivo `~/.config/nvim/init.lua` adicionei o parâmetro  
+
+```lua
+require("lazy-config")
+```
+Este arquivo `ìnit.lua` será o primeiro carregado ao iniciar o Neovim. Sendo assim, ele será utilizado como uma rerenciadas para importação de todas as dependencias.
+
+### 2. Arquivo Options  
+No arquivo `options.lua` são definidas algumas configurações próprias do Neovim, como por exemplo:  
+
+```lua
+local opt = vim.opt
+
+--adicionar numeração das linhas
+opt.number = true
+
+--adicionar numeração relativa nas linhas
+opt.relativenumber = true
+```
+Você pode entender como outras opções podem ser aplicadas consultando o [guia do Neovim para Lua](https://neovim.io/doc/user/lua-guide.html#lua-guide-options) e as [opções para o neovim](https://neovim.io/doc/user/options.html#option-summary)  
+
+Após criadas suas configurações, elas também devem ser importadas no arquivo `~/.config/nvim/init.lua` (no topo dele):  
+
+```lua
+require("lazy-config")
+```
+### 3. Arquivo Keymaps  
+
+Neste arquivo são definidos mapeamento de atalhos do teclado para serem utilizado nos Neovim. Sejam mapeamentos gerais como mapeamentos utilizados com plugins instalados. O arquivo possui comentários para utilização de novos Keymaps, mas outra fonte que pode ser útil é [esta página do Lazy](http://www.lazyvim.org/keymaps).  
+
+### 3. Instalando plugins  
+
+
+
 ## Como irá ficar com esse arquivo de configuração? (Preview)  
 
 
