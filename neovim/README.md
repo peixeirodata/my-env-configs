@@ -98,6 +98,8 @@ Após acessar a interface, você conseguirá gerenciar vários aspectos dos seus
 * [Fugitive](https://github.com/tpope/vim-fugitive)  
 * [Telescope](https://github.com/nvim-telescope/telescope.nvim)  
 * [Harpoon](https://github.com/ThePrimeagen/harpoon)  
+* [Which Key](https://github.com/folke/which-key.nvim)  
+* [Nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)  
 
 ---
 [ :us: ]
@@ -192,7 +194,9 @@ After including the plugins file, you ave to access the NETRW (accessing neovim 
 
 After getting into the UI, you'll be able to manage many aspects of your plugins.  
 
-## ReferencedpPlugins referenciados  
+## Referenced Plugins    
 * [Fugitive](https://github.com/tpope/vim-fugitive)  
 * [Telescope](https://github.com/nvim-telescope/telescope.nvim)  
 * [Harpoon](https://github.com/ThePrimeagen/harpoon)  
+* [Which Key](https://github.com/folke/which-key.nvim)  
+* [Nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)  
