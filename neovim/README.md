@@ -67,13 +67,27 @@ Você pode entender como outras opções podem ser aplicadas consultando o [guia
 Após criadas suas configurações, elas também devem ser importadas no arquivo `~/.config/nvim/init.lua` (no topo dele):  
 
 ```lua
-require("lazy-config")
+require("options")
 ```
 ### 3. Arquivo Keymaps  
 
-Neste arquivo são definidos mapeamento de atalhos do teclado para serem utilizado nos Neovim. Sejam mapeamentos gerais como mapeamentos utilizados com plugins instalados. O arquivo possui comentários para utilização de novos Keymaps, mas outra fonte que pode ser útil é [esta página do Lazy](http://www.lazyvim.org/keymaps).  
+Neste arquivo é definido o mapeamento de atalhos do teclado para serem utilizado no Neovim, sejam mapeamentos gerais como mapeamentos utilizados com plugins instalados. O arquivo possui comentários para utilização de novos Keymaps, mas outra fonte que pode ser útil é [esta página do Lazy](http://www.lazyvim.org/keymaps).  
+
+Os keymaps também devem ser importados no arquivo `~/.config/nvim/init.lua`:  
+
+```lua
+require("keymaps")
+```
 
 ### 3. Instalando plugins  
+No diretório `~/.config/nvim/lua/plugins` estão separados os scripts de instalação de cada um dos plugins. Estes scripts são apenas retornos de funções com especificações do repositório de origem do plugin, da versào a ser instalada e outras configurações opcionais, como por exemplo possíveis dependências.  
+Após incluir o arquivo do plugin, você pode acessar o NETRW (acessando o neovim através do terminal especificando apenas o path local) (imagem A) ou através de qualquer arquivo acessado no Neovim e executando o comando `:Lazy` para acessar a interface do gerenciador de pacotes:  
+
+![img1](https://github.com/peixeirodata/my-env-configs/assets/27984831/f0a14a79-2465-4603-9acd-d8871fde151e)  
+
+![img2](https://github.com/peixeirodata/my-env-configs/assets/27984831/1f461aa3-213e-4843-861e-fd4170fb6c68)  
+
+![Screenshot from 2024-04-07 22-46-03](https://github.com/peixeirodata/my-env-configs/assets/27984831/0c86d385-cdb9-4972-8828-f7a6e0bd7733)
 
 
 
