@@ -17,6 +17,7 @@ O [Neovim](https://neovim.io/) é um editor de textos baseado no [Vim](https://w
 │         └📂 plugins -> diretório com as diretrizes de cada plugin  
 │           ├── fugitive.lua  
 │           └── telescope.lua  
+│           └── harpoon.lua  
 
 
 ## Como funciona?  
@@ -116,6 +117,7 @@ Após acessar a interface, você conseguirá gerenciar vários aspectos dos seus
 │         └📂 plugins -> directory with each installed plugin definitions  
 │           ├── fugitive.lua  
 │           └── telescope.lua  
+│           └── harpoon.lua  
 
 ## How does it works?  
 
